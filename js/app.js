@@ -1,5 +1,7 @@
 'use strict';
 
+//Lab 2
+
 var userName = prompt('What is your name?');
 
 var pets = prompt('Do I have any pets? Answer with yes or no');
@@ -40,6 +42,43 @@ if (birthplace.toLowerCase() === 'philippines' || birthplace.toLowerCase() === '
   alert('Correct that is where I was born');
 } else {
   alert('Incorrect I was not born in ' + birthplace);
+}
+
+//Lab 3
+
+var number = 25;
+for (var i = 0; i < 4; i++) {
+  var entry = prompt('I am thinking of a number between 1 and 100. Guess what that number is');
+  var guess = parseInt(entry);
+  if (guess === number) {
+    alert('Are you a mind reader? You just read my mind!');
+    break;
+  } else if (guess > number) {
+    alert('Nope too high');
+  } else {
+    alert('Too low');
+  }
+}
+alert('The number was 25');
+
+var correct = 0;
+function check(fruit) {
+  var fruits = ['apples', 'pears', 'bananas', 'acai'];
+  for (var i = 0; i < fruits.length; i++) {
+    if (fruit === fruit[i]) {
+      correct++;
+      //Prevent hacking of score
+      fruits.splice(i,0);
+
+      return true;
+    }
+  }
+  return false;
+}
+
+for (var i = 0; i < 6; i++) {
+  var fruityGuess = prompt('Try to guess what fruit I like');
+
 }
 
 document.getElementById('user_name').innerHTML = userName;
