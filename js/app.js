@@ -4,7 +4,7 @@ var userName = prompt('What is your name?');
 
 var pets = prompt('Do I have any pets? Answer with yes or no');
 // console.log('Number of pets: ', pets);
-if (status.toLowerCase() === 'y' || status.toLowerCase() === 'yes') {
+if (pets.toLowerCase() === 'y' || pets.toLowerCase() === 'yes') {
   alert('That is incorrect I currently have not pets');
 } else {
   alert('Correct I currently have no pets');
